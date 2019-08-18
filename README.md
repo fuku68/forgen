@@ -11,5 +11,6 @@ export FORGE_CLIENT_SECRET=<forge client secret>
 ## CLI COMMAND
 
 ```
+./forgen.py access_token
 ./forgen.py resumable <bucket> <object> <file>
 ```

@@ -16,7 +16,8 @@ def print_help():
   str = """
 Usage: forgen <command>
 
-command:  resumable <bucket> <object> <file>
+command:  access_token
+          resumable <bucket> <object> <file>
 """
   print(str)
   
@@ -61,7 +62,10 @@ def resumable_upload(token, bucket, object_name, file_name):
 
 
 args = sys.argv
-if len(args) > 5 and args[1] == "resumable":
+if len(args) >= 2 and args[1] == "access_token":
+  access_token = get_access_token(cliend_id, client_secret)
+  print(access_token)
+elif len(args) >= 5 and args[1] == "resumable":
   access_token = get_access_token(cliend_id, client_secret)
   print(access_token)
   resumable_upload(access_token, args[2], args[3], args[4])
