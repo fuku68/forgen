@@ -1,2 +1,2 @@
 # forgen
-forge uttil cli
+autodesk forge uttil cli
